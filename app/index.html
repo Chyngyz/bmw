@@ -7,10 +7,12 @@
     <title>bmw</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,400italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico in the root directory -->
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/video.js/dist/video-js.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -26,35 +28,286 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>jQuery</li>
-      </ul>
-    </div>
+
+    <!-- Begin bmw-hero -->
+    <section class="bmw-hero">
+      <div class="video-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-md-push-8">
+            <div class="bmw-brand">
+              <a href="/" class="bmw-brand-l">
+                <span class="country">BMW Кыргызстан</span>
+                <span class="web">www.bmw.kg</span>
+              </a>
+              <a href="/" class="bmw-brand-r">
+                <span class="logo"><img src="images/BMW_logo.png" alt="BMW Logo"></span>
+                <span class="slogan">С удовольствием <br> за рулем</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-8 col-md-pull-4">
+            <div class="tel">
+              <div class="tel-num">+996 (312) 37 67 70</div>
+              
+              <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout=" button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+            </div>
+            <nav class="hero-nav">
+              <ul class="list-inline">
+                <li><a href="#">Бесплатный тест-драйв</a></li>
+                <li><a href="#">Личный менеджер</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="heading-text">
+          <div class="heading-text-1">УПРАВЛЯЯ РОСКОШЬЮ.</div>
+          <div class="heading-text-2">НОВЫЙ BMW 7 СЕРИИ</div>
+          <div class="heading-text-3">САМЫЙ ИННОВАЦИОННЫЙ АВТОМОБИЛЬ В СВОЕМ КЛАССЕ</div>
+        </div>
+      </div>
+    </section>
+    <!-- End of bmw-hero -->
+
+    <!-- Begin bmw-content -->
+    <section class="bmw-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="bmw-card">
+              <div class="title">МОЩЬ И ЭКОНОМИЧНОСТЬ</div>
+              <hr>
+              <div class="text">
+                <p><strong>Объем 4,4 л (450 л.с.)</strong> <br>Разгон 0-100 за 4,4 секунды <br><br>
+                <strong>Расход всего 11,6 л</strong><br>в городском цикле </p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bmw-card">
+              <div class="title">ИНДИВИДУАЛЬНАЯ КОМПЛЕКТАЦИЯ</div>
+              <hr>
+              <div class="text">
+                <p>Любые настройки по Вашему вкусу от цвета кожи и подсветки до сидений с функцией массажа</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bmw-card">
+              <div class="title">ГАРАНТИЯ 2 ГОДА БЕЗ ОГРАНИЧЕНИЯ ПРОБЕГА</div>
+              <hr>
+              <div class="text">
+                <p>Бесплатное обслуживание в официальном сервисном центре в Бишкеке - BMW Кыргызстан</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="bmw-card">
+              <div class="title">BMW В КРЕДИТ 0% ГОДОВЫХ</div>
+              <hr>
+              <div class="text">
+                <p>Уникальные условия кредитования автомобилей BMW. Оплачивается только заявленая стоимость автомобиля, без процентов.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container ind-manager">
+        <div class="row">
+          <div class="col-md-12">
+            <h1><strong>ВАШ ИНДИВИДУАЛЬНЫЙ МЕНЕДЖЕР</strong></h1>
+            <p>Вас интересуют цены и комплектации? Хотите узнать условия кредитования или собрать свой BMW? <br>Наши сотрудники готовы ответить на любые вопросы о новом BMW 7 серии. Каждому клиенту мы предоставляем индивидуального менеджера. </p>
+            <h2><strong>+996 (312) 37 67 70</strong></h2>
+            <a href="#" class="btn btn-blue">Заказать звонок</a>
+            <a href="#" class="btn btn-blue">Получить персональное предложение</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid ind-manager-imgs">
+        <div class="row margined">
+          <div class="col-md-2">
+            <img src="images/1.jpg" alt="">
+          </div>
+          <div class="col-md-2 col-md-offset-8">
+            <img src="images/2.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <img src="images/img-block.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="container innovation">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1><strong>ОПЕРЕЖАЯ ВРЕМЯ</strong></h1>
+            <h3><strong>ИННОВАЦИОННЫЕ ФУНКЦИИ В НОВОМ BMW 7 СЕРИИ</strong></h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <p>BMW имеет давние традиции в формировании автомобильного будущего. Потому что мы знаем, что лучший способ предсказать будущее — это создать его. С совершенно новым BMW 7 серии мы уже сегодня создаем роскошь будущего. С инновационными технологиями, эталонным уровнем комфорта, современным дизайном и динамикой — впечатляющей и в то же время чрезвычайно эффективной.</p>
+            <p>Совершенно новый BMW 7 серии создает особую форму удовольствия от езды не только за рулем. Пассажиры, занимающие роскошные задние сиденья, путешествуют в уютной атмосфере просторного салона.</p>
+          </div>
+          <div class="col-md-6">
+            <a href="#" class="bmw-player">
+              <img src="images/side.jpg" alt="">
+              <img class="play-btn" src="images/play.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bwm-slider-wrap">
+        <div id="bwm-slider-1" class="bwm-slider">
+          <div class="item">
+            <img src="images/slide-1/1.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/slide-1/2.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/slide-1/3.jpg" alt="">
+          </div>
+        </div>
+        <div class="contain container">
+          <h2><strong>ЭСТЕТИКА. ДЛЯ ТЕХ, КТО СМОТРИТ В БУДУЩЕЕ</strong></h2>
+        </div>
+
+        <div class="contain-2 container">
+          <p>8-ступенчатая АКПП Steptronic в сочетании с полным приводом  BMW xDrive и двигателем объемом 4,4 л обеспечивают разгон 0 - 100 км ч. на уровне спорткара, всего за 4.4 секунды </p>
+        </div>
+      </div>
+
+      <div class="container bmw-details">
+        <div class="row">
+          <div class="col-md-12">
+            <h1><strong>ИННОВАЦИИ, МЕНЯЮЩИЕ МИР</strong></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <img src="images/b1.jpg" alt="">
+            <p class="title"><strong>СЕНСОРНЫЙ ПЛАНШЕТ BMW TOUCH COMMAND</strong></p>
+            <p>Планшет с 7-дюймовым дисплеем, встроенный в задний центральный подлокотник; позволяет выполнять различные настройки и управлять многочисленными функциями от контроля системы ондиционирования до функции массажа, а также управление функциями развлекательной системы.</p>
+          </div>
+          <div class="col-md-3">
+            <img src="images/b2.jpg" alt="">
+            <p class="title"><strong>СИСТЕМА УПРАВЛЕНИЯ ЖЕСТАМИ BMW</strong></p>
+            <p>Управление определенными функциями с помощью запрограммированных жестов, например, "взмах" или "указание". С помощью специальных датчиков система распознает определенные жесты и позволяет регулировать, например, громкость развлекательной системы, а также принять телефонный вызов или отказаться от него.</p>
+          </div>
+          <div class="col-md-3">
+            <img src="images/b3.jpg" alt="">
+            <p class="title"><strong>ПАНОРАМНАЯ СТЕКЛЯННАЯ КРЫША SKY LOUNGE</strong></p>
+            <p>Способствует ощущению большого простора, а в темноте светодиодная графика из более 15 ООО элементов в одном из 6 возможных цветов позволяет создать соответствующую Вашему настроению атмосферу.</p>
+          </div>
+          <div class="col-md-3">
+            <img src="images/b4.jpg" alt="">
+            <p class="title"><strong>ЛАЗЕРНЫЕ ФАРЫ BMW LASERLIGHT</strong></p>
+            <p>В режиме дальнего света лазерные фары BMW Laserlight освещают дорогу вплоть до 600 метров вперед, что почти в два раза больше дальности света обычных светодиодных фар. Данный режим автоматически включается по достижении скорости 70 км/ч. В состав системы входит также BMW Selective Beam (неослепляющая система управления дальним светом.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bwm-slider-wrap">
+        <div id="bwm-slider-2" class="bwm-slider">
+          <div class="item">
+            <img src="images/slide-1/4.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/slide-1/5.jpg" alt="">
+          </div>
+          <div class="item">
+            <img src="images/slide-1/3.jpg" alt="">
+          </div>
+        </div>
+        <div class="contain container">
+          <h2><strong>КОМФОРТ. В КАЖДОЙ ДЕТАЛИ</strong></h2>
+        </div>
+
+        <div class="contain-2 container">
+          <p style="height:180px;padding:20px;">Современное понимание роскоши и атмосфера уюта в интерьере, идеально выверенные линии и внимание к деталям, важным как для водителя, так и для пассажиров - это основные аспекты концепции дизайна интерьера нового BMW 7 серии.</p>
+        </div>
+      </div>
+
+
+    </section>
+    <!-- End of bmw-content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.
     <script>
       (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new DateWork&amp;Travel      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
       e.src='https://www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
+    </script> -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="/bower_components/video.js/dist/video.js"></script>
+    <script src="/bower_components/eventEmitter/EventEmitter.js"></script>
+    <script src="/bower_components/eventie/eventie.js"></script>
+    <script src="/bower_components/imagesloaded/imagesloaded.js"></script>
+    <script src="/bower_components/BigVideo/lib/bigvideo.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="/bower_components/matchHeight/jquery.matchHeight-min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
+    <script src="scripts/owl.carousel.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
   </body>

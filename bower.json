@@ -2,8 +2,11 @@
   "name": "bmw",
   "private": true,
   "dependencies": {
+    "BigVideo": "BigVideo.js#~1.1.5",
     "jquery": "~2.1.1",
-    "modernizr": "~2.8.1"
+    "modernizr": "~2.8.1",
+    "bootstrap-sass": "~3.3.6",
+    "matchHeight": "matchheight#~0.6.0"
   },
   "devDependencies": {
     "chai": "~3.4.2",

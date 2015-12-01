@@ -1,31 +1,384 @@
 // bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+@import "bourbon/bourbon";
+@import "utils/responsive";
+
+@import "vendor/owl/owl";
+@import "vendor/bootstrap/bootstrap";
+
+@import "base/general";
+
+@import "modules/hero";
+
+
+
+.bmw-hero {
+	height: 100vh;
+	width: 100%;
+	background-color: #fff;
+	background-image: url('../images/hero.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	position: fixed;
+
+
+	.video-bg {
+		width: 100%;
+	    overflow: hidden;
+	    position: absolute;
+	    height: 100vh;
+	    left: 0;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	}
+
+	.video-js {
+		height: 100%;
+		width: 100%;
+	}
+
+	.vjs-loading-spinner {
+		display: none !important;
+	}
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+.tel {
+	margin-top: 30px;
+	&-num {
+		font-size: rem(20);
+		font-weight: bolder;
+		color: #fff;
+		display: inline-block;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+
+	.fb-like {
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.hero-nav {
+	a {
+		font-size: rem(13);
+		text-decoration: none;
+		color: #fff;
+
+		&:hover {
+			border-bottom: 1px dashed;
+		}
+	}
+}
+
+.heading-text {
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 10;
+
+	&-1 {
+		font-size: rem(28);
+		font-weight: bold;
+	}
+
+	&-2 {
+		font-size: rem(36);
+		font-weight: bold;
+	}
+
+	&-3 {
+		font-size: rem(20);
+		font-weight: bold;
+	}
+}
+
+.bmw-brand {
+	float: right;
+
+	@include MQM(SM) {
+		float: none;
+		text-align: center;
+	}
+
+
+	.bmw-brand-l, .bmw-brand-r {
+		background-color: #fff;
+		height: 125px;
+		width: 125px;
+		display: inline-block;
+		position: relative;
+		text-decoration: none;
+
+		.country {
+			position: absolute;
+			top: 15px;
+			left: 10px;
+			font-size: rem(12);
+			font-weight: bold;
+			color: #000;
+		}
+
+		.web {
+			position: absolute;
+			bottom: 15px;
+			left: 10px;
+			font-size: rem(12);
+			font-weight: bold;
+			color: #808080;
+		}
+
+		.logo {
+			position: absolute;
+			top: 15px;
+			left: 50%;
+			height: 65px;
+			width: 65px;
+			@include transform(translateX(-50%));
+
+			img {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		
+		.slogan {
+			position: absolute;
+			bottom: 15px;
+			left: 50%;
+			font-size: rem(12);
+			font-weight: bold;
+			color: #000;
+			text-align: center;
+			line-height: 1;
+			width: 100%;
+			@include transform(translateX(-50%));
+		}
+
+
+	}
+}
+
+
+.bmw-content {
+	margin-top: 100vh;
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    z-index: 30;
+    padding-bottom: 30px;
+
+}
+
+.bmw-card {
+	height: 193px;
+	box-shadow: 0px 0px 17px -5px #000;
+	@include transform(translateY(-62px));
+	background-color: #fff;
+	padding: 15px 10px 0;
+	overflow: hidden;
+
+	@include MQM(MD) {
+		@include transform(translateY(0));
+		margin-top: 10px;
+	}
+	
+	hr {
+		border-color: #CBCBCB;
+		margin-top: 11px;
+		margin-bottom: 35px;
+	}
+
+	.title {
+		font-size: rem(15);
+		text-transform: uppercase;
+		font-weight: bold;
+		line-height: rem(18);
+		height: 36px;
+		color: #000;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.text {
+		font-size: rem(14);
+		line-height: rem(16);
+		height: 80px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+.btn {
+	height: 40px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 40px;
+    padding: 0 15px;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0;
+
+    &:hover, &:active, &:focus {
+    	color: #fff;
+    }
+}
+
+
+.btn-blue {
+	background-color: #1C62C5;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (startColorstr=#1c62c5, endColorstr=#1f72e4)";
+    background-image: -webkit-linear-gradient(#1C62C5,#1F72E4);
+    background-image: -moz-linear-gradient(#1c62c5,#1f72e4);
+    background-image: linear-gradient(#1C62C5,#1F72E4);
+    margin: 0 30px 0 0;
+
+    &:hover {
+    	background-color: #1F72E4;
+	    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (startColorstr=#1f72e4, endColorstr=#1c62c5)";
+	    background-image: -webkit-linear-gradient(#1f72e4,#1c62c5);
+	    background-image: -moz-linear-gradient(#1f72e4,#1c62c5);
+	    background-image: linear-gradient(#1f72e4,#1c62c5);
+    }
+}
+
+.ind-manager {
+	padding: 0 60px;
+
+	.btn {
+		margin-top: 30px;
+	}
+
+	h1 {
+		margin-top: 0;
+   		margin-bottom: 30px;
+	}
+}
+
+.ind-manager-imgs {
+	img {
+		width: 100%;
+	}
+
+	.margined {
+		margin-top: -70px;
+		margin-bottom: 20px;
+	}
+}
+
+.innovation {
+	h1 {
+		margin-top: 50px;
+		margin-bottom: 10px;
+
+		&+h3 {
+			margin-top: 0;
+
+		}
+	}
+
+	p, img {
+		margin-top: 20px;
+	}
+
+	p {
+		line-height: rem(19);
+	}
+
+
+}
+
+.bmw-player {
+	position: relative;
+
+	&:hover {
+		.play-btn {
+			height: 100px;
+			width: 100px;
+		}
+	}
+
+	.play-btn {
+		height: 90px;
+		width: 90px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%, -50%));
+		@include transition(all 0.2s ease-in-out);
+	}	
+}
+
+
+.bwm-slider-wrap {
+	margin-top: 60px;
+	position: relative;
+
+	& > .contain {
+		position: absolute;
+		top: 20px;
+		z-index: 5;
+		left: 50%;
+		@include transform(translateX(-50%));
+
+		color: #fff;
+		font-weight: bold;
+	}
+
+	& > .contain-2 {
+		position: absolute;
+		bottom: 0;
+		z-index: 5;
+		left: 50%;
+		@include transform(translateX(-50%));
+
+		color: #fff;
+		font-weight: bold;
+
+		p {
+			padding: 35px 20px;
+			height: 160px;
+			width: 433px;
+			color: #fff;
+			font-weight: 400;
+			background-color: rgba(0,0,0,.7);
+		}
+	}
+
+
+}
+
+.bwm-slider {
+	width: 100%;
+
+	.item {
+		height: 100%;
+		width: 100%;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.bmw-details {
+	h1 {
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: rem(14);
+		line-height: rem(16);
+	}
+
+	.title {
+		margin-top: 10px;
+		color: #000;
+	}
 }
