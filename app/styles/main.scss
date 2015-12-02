@@ -6,11 +6,30 @@
 @import "utils/responsive";
 
 @import "vendor/owl/owl";
+@import "vendor/slick/slick";
 
 @import "base/general";
 
 @import "modules/hero";
 
+
+video {
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+  	transition: 1s opacity;
+  	opacity: 1;
+
+  	&.bg-vid-hidden {
+  		opacity: 0;
+  	}
+}
 
 
 .bmw-hero {
@@ -42,6 +61,10 @@
 
 	.vjs-loading-spinner {
 		display: none !important;
+	}
+
+	.bmw-brand {
+		float: right;
 	}
 }
 
@@ -97,7 +120,6 @@
 }
 
 .bmw-brand {
-	float: right;
 
 	@include MQM(SM) {
 		float: none;
@@ -339,9 +361,9 @@
 		color: #fff;
 		font-weight: bold;
 
-		p {
-			padding: 35px 20px;
-			height: 160px;
+		.text-box {
+			padding: 20px;
+			height: 180px;
 			width: 433px;
 			color: #fff;
 			font-weight: 400;
@@ -369,15 +391,17 @@
 	}
 }
 
-.bmw-slider-gallery {
+.bwm-gallery {
 
-	img {
-		height: 550px;
+	h1 {
+		margin-top: 50px;
+		margin-bottom: 20px;
 	}
 }
 
 .bmw-details {
 	h1 {
+		margin-top: 50px;
 		margin-bottom: 20px;
 	}
 
@@ -393,5 +417,32 @@
 
 	img {
 		width: 100%;
+	}
+}
+
+.bmw-footer {
+	padding: 30px 20px;
+	background-color: #F5F5F5;
+	border-top: 1px solid #ccc;
+
+	.bmw-brand {
+		margin-bottom: 20px;
+	}
+
+	.col-md-4 > img {
+		margin-top: 20px;
+    	margin-bottom: 32px;
+	}
+
+	.btn-blue {
+		margin-top: 20px;
+	}
+
+	p {
+		font-size: rem(13);
+	}
+
+	.copy {
+		color: #808080;
 	}
 }

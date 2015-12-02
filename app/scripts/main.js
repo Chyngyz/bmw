@@ -1,16 +1,21 @@
 ;(function ($) {
+
 	$(document).ready(function() {
 		
 	    if (!Modernizr.video || $(window).width() < 780) {
 
 	    } else {
-	    	setTimeout(function() { 
-	    		BV = new $.BigVideo({container: $('.video-bg')});
-		    	BV.init();
-		        BV.show('http://content.bmwusa.com/microsite/bmw-g12-lp/videos/watch_video_20150609.mp4', {ambient:true});
-	    	}, 3500);
+	    	var vid = document.getElementById("bgvid");
+			vid.onloadeddata = function() {
+				setTimeout(function () {
+					$(vid).removeClass('bg-vid-hidden');
+				}, 3000);
+			    
+			};
+
 	    }
 
+	    
 	    $('#video').magnificPopup({
 		  	type: 'iframe',
 		  	iframe: {
@@ -38,7 +43,7 @@
 	 
 	  	});
 
-	  	$("#bmw-slider-3").owlCarousel({
+	  	$("#bmw-slider-23").owlCarousel({
 	    	navigation : true, // Show next and prev buttons
 		    slideSpeed : 300,
 		    paginationSpeed : 400,
@@ -46,6 +51,32 @@
 		    navigationText: false,
 		    pagination: false
 	  	});
+
+	  	$('#bmw-slider-3').slick({
+		  centerMode: true,
+		  centerPadding: '120px',
+		  slidesToShow: 1,
+		  responsive: [
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,
+		      settings: {
+		        arrows: false,
+		        centerMode: true,
+		        centerPadding: '40px',
+		        slidesToShow: 1
+		      }
+		    }
+		  ]
+		});
 
 	});
 })(jQuery);
