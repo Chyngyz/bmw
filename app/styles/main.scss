@@ -269,7 +269,11 @@ video {
 }
 
 .ind-manager {
-	padding: 0 60px;
+	
+
+	@include MQ(LG) {
+		padding: 0 60px;
+	}
 
 	.btn {
 		margin-top: 30px;
@@ -278,17 +282,22 @@ video {
 	h1 {
 		margin-top: 0;
    		margin-bottom: 30px;
+
+   		@include MQM(MD) {
+   			margin-top: 30px;
+   		}
 	}
 }
 
 .ind-manager-imgs {
 	img {
+		margin-top: 20px;
 		width: 100%;
 	}
 
 	.margined {
-		margin-top: -70px;
-		margin-bottom: 20px;
+		margin-top: -90px;
+		
 	}
 }
 
@@ -316,6 +325,12 @@ video {
 
 .bmw-player {
 	position: relative;
+	display: block;
+	width: 100%;
+
+	img:first-child {
+		width: 100%;
+	}
 
 	&:hover {
 		.play-btn {
@@ -444,5 +459,125 @@ video {
 
 	.copy {
 		color: #808080;
+	}
+}
+
+.bmw-contact-form {
+	padding-bottom: 30px;
+}
+
+.contact-form {
+	.radio {
+		display: inline-block;
+	}
+
+	.form-control {
+		margin-bottom: 10px;
+	    height: 40px;
+	    padding: 0px 12px;
+	    font-size: rem(16);
+	    line-height: rem(40);
+	    color: #555555;
+	    background-color: #fff;
+	    background-image: none;
+	    border: 1px solid #808080;
+	    border-radius: 0px;
+	    box-shadow:none;
+	    position: relative;
+	}
+
+	select.form-control {
+		-webkit-appearance: none;
+	   	-moz-appearance:    none;
+	   	appearance:         none;
+	}
+
+	.form-group {
+		position: relative;
+
+		&.select:after {
+			content: "";
+			position: absolute;
+			top: 12px;
+			right: 8px;
+			width: 13px;
+			height: 15px;
+			background-image: url('../images/select.svg');
+		}
+	}
+
+	.margin-top {
+		margin-top: 20px;
+	}
+
+
+
+	.required:before {
+		content: "*";
+	    position: absolute;
+	    top: 8px;
+	    font-size: 18px;
+	    left: -15px;
+	    display: block;
+	    line-height: 28px;
+	    color: red;
+    }
+
+    .inline {
+    	display: inline-block;
+    	margin: 0 10px;
+    }
+
+    input[type="radio"] {
+	    display:none;
+	}
+	input[type="radio"] + label {
+	    color: #000;
+	    font-family:Arial, sans-serif;
+	    font-size:14px;
+	    cursor: pointer;
+	}
+	input[type="radio"] + label span {
+	    display:inline-block;
+	    width:19px;
+	    height:19px;
+	    margin:-1px 4px 0 0;
+	    vertical-align:middle;
+	    cursor:pointer;
+	    -moz-border-radius:  50%;
+	    border-radius:  50%;
+	    border: 1px solid #ccc;
+	    background-color: #fff;
+	}
+
+	input[type="radio"] + label span {
+	    position: relative;
+
+	    &:after {
+	    	content: "";
+	    	position: absolute;
+	    	height: 7px;
+		    width: 7px;
+		    border-radius: 50%;
+		    background-color: transparent;
+		    top: 5px;
+		    left: 5px;
+	    }
+	}
+
+	input[type="radio"]:checked + label span{
+	     border-color:blue;
+
+	     &:after {
+		    background-color: blue;
+	    }
+	}
+
+	input[type="radio"] + label span,
+	input[type="radio"]:checked + label span {
+	  -webkit-transition:all 0.2s linear;
+	  -o-transition:all 0.2s linear;
+	  -moz-transition:all 0.2s linear;
+	  transition:all 0.2s linear;
 	}
 }

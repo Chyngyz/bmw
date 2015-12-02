@@ -150,7 +150,7 @@
       </div>
 
       <div class="container-fluid ind-manager-imgs">
-        <div class="row margined">
+        <div class="row margined visible-lg">
           <div class="col-md-2">
             <img src="images/1.jpg" alt="">
           </div>
@@ -216,22 +216,22 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6">
             <img src="images/b1.jpg" alt="">
             <p class="title"><strong>СЕНСОРНЫЙ ПЛАНШЕТ BMW TOUCH COMMAND</strong></p>
             <p>Планшет с 7-дюймовым дисплеем, встроенный в задний центральный подлокотник; позволяет выполнять различные настройки и управлять многочисленными функциями от контроля системы ондиционирования до функции массажа, а также управление функциями развлекательной системы.</p>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6">
             <img src="images/b2.jpg" alt="">
             <p class="title"><strong>СИСТЕМА УПРАВЛЕНИЯ ЖЕСТАМИ BMW</strong></p>
             <p>Управление определенными функциями с помощью запрограммированных жестов, например, "взмах" или "указание". С помощью специальных датчиков система распознает определенные жесты и позволяет регулировать, например, громкость развлекательной системы, а также принять телефонный вызов или отказаться от него.</p>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6">
             <img src="images/b3.jpg" alt="">
             <p class="title"><strong>ПАНОРАМНАЯ СТЕКЛЯННАЯ КРЫША SKY LOUNGE</strong></p>
             <p>Способствует ощущению большого простора, а в темноте светодиодная графика из более 15 ООО элементов в одном из 6 возможных цветов позволяет создать соответствующую Вашему настроению атмосферу.</p>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-6">
             <img src="images/b4.jpg" alt="">
             <p class="title"><strong>ЛАЗЕРНЫЕ ФАРЫ BMW LASERLIGHT</strong></p>
             <p>В режиме дальнего света лазерные фары BMW Laserlight освещают дорогу вплоть до 600 метров вперед, что почти в два раза больше дальности света обычных светодиодных фар. Данный режим автоматически включается по достижении скорости 70 км/ч. В состав системы входит также BMW Selective Beam (неослепляющая система управления дальним светом.</p>
@@ -283,10 +283,106 @@
       <!-- Begin bmw-contact-form -->
       <div class="bmw-contact-form">
         <div class="container">
+
           <div class="row">
             <div class="col-xs-12">
               <h1><strong>ЗАПОЛНИТЕ ФОРМУ И УЗНАЙТЕ О НОВОМ <br>BMW 7 СЕРИИ ПЕРВЫМ</strong></h1>
             </div>
+          </div>
+
+          <div class="row">
+            <form action="" class="contact-form">
+              <div class="col-md-12 col-xs-12 margin-top">
+                <strong>Обращение</strong>
+                <div class="inline">
+                  <input type="radio" id="radio01" name="radio" checked />
+                  <label for="radio01"><span></span>Господин</label>
+                </div>
+                <div class="inline">
+                  <input type="radio" id="radio02" name="radio" />
+                  <label for="radio02"><span></span>Госпожа</label>
+                </div>
+              </div>
+
+              <div class="col-md-8 col-xs-12 margin-top">
+                <div class="row">
+                  <div class="col-md-4 ">
+                    <div class="form-group required">
+                      <input type="text" class="form-control" id="firstName" placeholder="Ваше имя" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="middleName" placeholder="Ваше отчество">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="lastName" placeholder="Ваша фамилия">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4 ">
+                    <div class="form-group required">
+                      <input type="email" class="form-control" id="firstName" placeholder="E-mail" required>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group">
+                      <input type="num" class="form-control" id="middleName" placeholder="Телефон">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="margin-top"><strong>Пожалуйста, укажите марку вашего автомобиля</strong></p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="form-group select">
+                      <select class="form-control" name="car-model">
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>X</option>
+                        <option>Z4</option>
+                        <option>M</option>
+                        <option>BMWi</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="margin-top"><strong>Выберите способ получения детальной информации</strong></p>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="inline">
+                      <input type="radio" id="email" name="type-radio" />
+                      <label for="email"><span></span>Персональное предложение на E-mail</label>
+                    </div>
+                    <div class="inline">
+                      <input type="radio" id="call" name="type-radio" checked />
+                      <label for="call"><span></span>Звонок менеджера</label>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="col-md-12 col-xs-12 margin-top">
+                <button class="btn btn-blue">Получить информацию</button>
+              </div>
+              
+
+
+            </form>
           </div>
         </div>
       </div>
