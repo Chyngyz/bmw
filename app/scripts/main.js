@@ -56,6 +56,7 @@
 		  centerMode: true,
 		  centerPadding: '120px',
 		  slidesToShow: 1,
+		  draggable: false,
 		  responsive: [
 		    {
 		      breakpoint: 768,
@@ -63,7 +64,7 @@
 		        arrows: false,
 		        centerMode: true,
 		        centerPadding: '40px',
-		        slidesToShow: 2
+		        slidesToShow: 1
 		      }
 		    },
 		    {
@@ -78,5 +79,29 @@
 		  ]
 		});
 
+		$('.slick-track').lightGallery({
+		    thumbnail:false,
+		    download: false,
+		    animateThumb: false,
+		    showThumbByDefault: false
+		}); 
+
 	});
 })(jQuery);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

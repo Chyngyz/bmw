@@ -49,12 +49,12 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-next {
     position: absolute;
     display: block;
-    height: 54px;
-    width: 30px;
+    height: 100%;
+    width: 120px;
     line-height: 0px;
     font-size: 0px;
     cursor: pointer;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.8);
     color: transparent;
     top: 50%;
     margin-top: -10px\9; /*lte IE 8*/
@@ -67,7 +67,6 @@ $slick-opacity-not-active: 0.25 !default;
     z-index: 10;
     &:hover, &:focus {
         outline: none;
-        background: transparent;
         color: transparent;
         &:before {
             opacity: $slick-opacity-on-hover;
@@ -81,15 +80,16 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-prev:before, .slick-next:before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
     height: 54px;
     width: 30px;
+    @include transform(translate(-50%, -50%));
     background-image: url('../images/arrow.svg');
 }
 
 .slick-prev {
-    left: 25px;
+    left: 0px;
 
     &:before {
         
@@ -97,12 +97,10 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-next {
-    right: 25px;
+    right: 0px;
 
     &:before {
-        -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        transform: rotate(180deg);
+        @include transform(translate(-50%, -50%) rotate(180deg));
     }
 }
 

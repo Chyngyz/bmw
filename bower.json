@@ -8,8 +8,8 @@
     "bootstrap-sass": "~3.3.6",
     "matchHeight": "matchheight#~0.6.0",
     "magnific-popup": "~1.0.0",
-    "slick-carousel": "~1.5.9"
+    "slick-carousel": "~1.5.9",
+    "lightgallery": "~1.2.7"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
