@@ -95,6 +95,10 @@
   left: 50%;
   z-index: 50;
   @include transform(translateX(-605%));
+
+  @include MQM(SM) {
+    @include transform(translateX(-50%));
+  }
 }
 
 

@@ -42,6 +42,10 @@ video {
 	background-size: cover;
 	position: fixed;
 
+	@include MQM(SM) {
+		position: relative;
+	}
+
 
 	.video-bg {
 		width: 100%;
@@ -195,6 +199,10 @@ video {
     width: 100%;
     background-color: white;
     z-index: 30;
+
+    @include MQM(SM) {
+		margin-top: 0;
+	}
 
     @media screen and (-webkit-min-device-pixel-ratio:0) {
 		& { background-color:#ffffff }
@@ -616,10 +624,10 @@ video {
 	}
 
 	input[type="radio"]:checked + label span{
-	     border-color:blue;
+	     border-color:#1F72E4;
 
 	     &:after {
-		    background-color: blue;
+		    background-color: #1F72E4;
 	    }
 	}
 
