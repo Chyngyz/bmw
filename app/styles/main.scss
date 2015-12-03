@@ -22,7 +22,7 @@ video {
     width: auto;
     height: auto;
     z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
+    @include transform(translate(-50%, -50%));
   	transition: 1s opacity;
   	opacity: 1;
 
@@ -295,8 +295,36 @@ video {
 	}
 
 	.margined {
-		margin-top: -90px;
+		position: relative;
+		height: 10px;
+
 		
+
+		@media only screen and (max-width : 1360px) {
+            & {
+            	display: none;
+            }
+        }
+	}
+
+	.img-block {
+		position: absolute;
+		top: -195px;
+		width: 16.6%;
+
+		@media only screen and (max-width : 1580px) {
+            & {
+            	top: -144px;
+    			width: 15.6%;
+            }
+        }
+
+		&:first-child {
+			left: 0;
+		}
+		&:last-child {
+			right: 0;
+		}
 	}
 }
 
