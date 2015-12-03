@@ -12,6 +12,18 @@
 
 @import "modules/hero";
 
+h1 {
+	@include MQM(MD) {
+		font-size: rem(28px);
+	}
+}
+
+h2 {
+	@include MQM(MD) {
+		font-size: rem(26px);
+	}
+}
+
 
 video {
 	position: fixed;
@@ -396,6 +408,10 @@ video {
 	margin-top: 60px;
 	position: relative;
 
+	@include MQM(SM) {
+		margin-top: 10px;
+	}
+
 	& > .contain {
 		position: absolute;
 		top: 20px;
@@ -423,8 +439,10 @@ video {
 		font-weight: bold;
 
 		@include MQM(SM) {
-				width: 100%;
-			}
+			position: static;
+			width: 100%;
+			@include transform(translateX(0%));
+		}
 
 		.text-box {
 			padding: 20px;
@@ -436,6 +454,7 @@ video {
 
 			@include MQM(SM) {
 				width: 100%;
+				height: auto;
 			}
 		}
 	}
@@ -450,6 +469,10 @@ video {
 		height: 660px;
 		width: 100%;
 		position: relative;
+
+		@include MQM(SM) {
+			height: 400px;
+		}
 
 		img {
 			position: relative;
