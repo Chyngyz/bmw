@@ -86,6 +86,11 @@
 		    showThumbByDefault: false
 		}); 
 
+		smoothScroll.init({
+			speed: 1000,
+			easing: 'easeInOutCubic'
+		});
+
 	});
 })(jQuery);
 
