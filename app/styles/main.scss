@@ -662,3 +662,12 @@ video {
 	  transition:all 0.2s linear;
 	}
 }
+
+.email-sent {
+	margin: 100px 0;
+
+	@include MQM(SM) {
+		margin: 30px 0;
+
+	}
+}
