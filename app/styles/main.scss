@@ -56,6 +56,7 @@ video {
 
 	@include MQM(SM) {
 		position: relative;
+		height: 60vh;
 	}
 
 
@@ -83,7 +84,7 @@ video {
 		float: right;
 
 		@include MQM(SM) {
-			float: none;
+			
 		}
 	}
 }
@@ -126,24 +127,34 @@ video {
 	&-1 {
 		font-size: rem(28);
 		font-weight: bold;
+
+		@include MQM(SM) {
+			font-size: rem(16);
+		}
 	}
 
 	&-2 {
 		font-size: rem(36);
 		font-weight: bold;
+		@include MQM(SM) {
+			font-size: rem(22);
+		}
 	}
 
 	&-3 {
 		font-size: rem(20);
 		font-weight: bold;
+
+		@include MQM(SM) {
+			margin-top: 20px;
+		}
 	}
 }
 
 .bmw-brand {
 
 	@include MQM(SM) {
-		float: none;
-		text-align: center;
+		
 	}
 
 
@@ -155,6 +166,16 @@ video {
 		position: relative;
 		text-decoration: none;
 
+		@include MQM(SM) {
+			height: 90px;
+			width: 90px;
+		}
+
+		@media only screen and (max-width : 320px) {
+            height: 70px;
+			width: 70px;
+        }
+
 		.country {
 			position: absolute;
 			top: 15px;
@@ -162,6 +183,12 @@ video {
 			font-size: rem(12);
 			font-weight: bold;
 			color: #000;
+
+			@include MQM(SM) {
+				font-size: rem(9);
+				top:10px;
+				left: 7px;
+			}
 		}
 
 		.web {
@@ -171,6 +198,15 @@ video {
 			font-size: rem(12);
 			font-weight: bold;
 			color: #808080;
+
+			@include MQM(SM) {
+				font-size: rem(9);
+			}
+
+			@media only screen and (max-width : 320px) {
+	            font-size: rem(7);
+	            left: 7px;
+	        }
 		}
 
 		.logo {
@@ -181,10 +217,23 @@ video {
 			width: 65px;
 			@include transform(translateX(-50%));
 
+			@include MQM(SM) {
+				height: 35px;
+				width: 35px;
+			}
+
+			@media only screen and (max-width : 320px) {
+	            height: 20px;
+				width: 20px;
+				top:10px;
+	        }
+
 			img {
 				height: 100%;
 				width: 100%;
 			}
+
+
 		}
 		
 		.slogan {
@@ -198,6 +247,14 @@ video {
 			line-height: 1;
 			width: 100%;
 			@include transform(translateX(-50%));
+
+			@include MQM(SM) {
+				font-size: rem(9);
+			}
+
+			@media only screen and (max-width : 320px) {
+	            font-size: rem(7);
+	        } 
 		}
 
 
@@ -671,3 +728,46 @@ video {
 
 	}
 }
+
+.nav-mobile {
+	float: left;
+	.tel-num {
+		font-size: 1rem;
+
+		@media only screen and (max-width : 320px) {
+            font-size: rem(12);
+        }
+	}
+
+	.nav-mobile-ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			line-height: rem(14);
+
+			a {
+				font-size: rem(12);
+				color: #fff;
+
+				@media only screen and (max-width : 320px) {
+		            font-size: rem(10);
+		        }
+			}
+
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
