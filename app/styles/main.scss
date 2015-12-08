@@ -469,7 +469,7 @@ video {
 		margin-top: 10px;
 	}
 
-	& > .contain {
+	& .contain {
 		position: absolute;
 		top: 20px;
 		z-index: 5;
@@ -482,10 +482,13 @@ video {
 		@include MQM(SM) {
 			color: #000;
 			width: 100%;
+			left: 0;
+			@include transform(translateX(0));
+			position: static;
 		}
 	}
 
-	& > .contain-2 {
+	& .contain-2 {
 		position: absolute;
 		bottom: 0;
 		z-index: 5;
@@ -508,6 +511,7 @@ video {
 			color: #fff;
 			font-weight: 400;
 			background-color: rgba(0,0,0,.7);
+			overflow: hidden;
 
 			@include MQM(SM) {
 				width: 100%;
@@ -527,8 +531,12 @@ video {
 		width: 100%;
 		position: relative;
 
+		@include MQM(MD) {
+			height: 500px;
+		}
+
 		@include MQM(SM) {
-			height: 400px;
+			height: auto;
 		}
 
 		img {
@@ -536,6 +544,11 @@ video {
 		    width: 100%;
 		    top: 50%;
 		    @include transform(translateY(-50%));
+
+		    @include MQM(SM) {
+				top: 0;
+				@include transform(translateY(0));
+			}
 		}
 	}
 }
