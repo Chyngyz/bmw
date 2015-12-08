@@ -91,6 +91,8 @@
 			easing: 'easeInOutCubic'
 		});
 
+		$('.pluginButtonPressed').css('opacity', 1);
+
 	});
 })(jQuery);
 

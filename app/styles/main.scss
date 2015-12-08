@@ -103,6 +103,8 @@ video {
 	.fb-like {
 		display: inline-block;
 		vertical-align: middle;
+		position: relative;
+		z-index: 100;
 	}
 }
 
@@ -771,7 +773,6 @@ video {
 		}
 	}
 }
-
 
 
 
