@@ -90,11 +90,12 @@
 }
 
 .owl-pagination {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
+  position: relative;
+  bottom: 36px;
+  width: 950px;
+  margin: 0 auto;
   z-index: 50;
-  @include transform(translateX(-605%));
+  
 
   @include MQM(SM) {
     @include transform(translateX(-50%));
