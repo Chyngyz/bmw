@@ -93,6 +93,8 @@
 
 		$('.pluginButtonPressed').css('opacity', 1);
 
+		$("#tel").mask("+996 (###) ## ## ##");
+
 	});
 })(jQuery);
 
